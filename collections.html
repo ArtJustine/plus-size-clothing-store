@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | Plus Size Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+            .collection-hero {
+                height: 400px;
+                background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1485965373059-f07aacff3d26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+                margin-bottom: 3rem;
+            }
+            .collection-hero h1 {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+            .collection-hero p {
+                font-size: 1.2rem;
+            }
+            .category-section {
+                margin-bottom: 5rem;
+            }
+            .category-header {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            .category-header h2 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            .subcategory-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                margin-bottom: 3rem;
+            }
+            .subcategory-card {
+                background: white;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+                text-align: center;
+                padding: 1.5rem;
+            }
+            .subcategory-card:hover {
+                transform: translateY(-5px);
+            }
+            .subcategory-image {
+                height: 200px;
+                margin-bottom: 1rem;
+            }
+            .subcategory-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .subcategory-title {
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
+            }
+            .collection-hero {
+                height: 50vh;
+                min-height: 400px;
+                background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1485965373059-f07aacff3d26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+                margin-bottom: 3rem;
+                padding: 2rem;
+            }
+            .collection-hero h1 {
+                font-size: clamp(2.5rem, 5vw, 4rem);
+                margin-bottom: 1rem;
+                font-weight: 700;
+                text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            }
+            .collection-hero p {
+                font-size: 1.2rem;
+                max-width: 600px;
+                margin: 0 auto 2rem;
+                line-height: 1.6;
+            }
+            .category-section {
+                margin-bottom: 4rem;
+                padding: 0 1.5rem;
+            }
+            .category-header {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            .category-header h2 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                color: #333;
+                position: relative;
+                display: inline-block;
+                padding-bottom: 0.5rem;
+            }
+            .category-header h2::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 3px;
+                background: var(--primary-color);
+            }
+            .subcategory-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 2rem;
+                margin: 0 auto;
+                max-width: 1400px;
+                padding: 0 1rem;
+            }
+            .subcategory-card {
+                background: white;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+                transition: all 0.3s ease;
+                text-align: center;
+                padding-bottom: 1.5rem;
+                position: relative;
+                border: 1px solid #f0f0f0;
+            }
+            .subcategory-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            }
+            .subcategory-image {
+                height: 250px;
+                margin-bottom: 1.5rem;
+                overflow: hidden;
+            }
+            .subcategory-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+            .subcategory-card:hover .subcategory-image img {
+                transform: scale(1.05);
+            }
+            .subcategory-title {
+                font-size: 1.25rem;
+                margin-bottom: 1rem;
+                color: #333;
+                font-weight: 600;
+                padding: 0 1rem;
+            }
+            .shop-now-btn {
+                display: inline-block;
+                padding: 0.6rem 1.5rem;
+                background: var(--primary-color);
+                color: white;
+                text-decoration: none;
+                border-radius: 25px;
+                transition: all 0.3s ease;
+                font-size: 0.9rem;
+                font-weight: 500;
+                border: 2px solid var(--primary-color);
+            }
+            .shop-now-btn:hover {
+                background: white;
+                color: var(--primary-color);
+                transform: translateY(-2px);
+            }
+            @media (max-width: 768px) {
+                .collection-hero {
+                    height: 350px;
+                    padding: 1rem;
+                }
+                .subcategory-grid {
+                    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                    gap: 1.5rem;
+                    padding: 0;
+                }
+                .subcategory-image {
+                    height: 200px;
+                }
+            }
+            @media (max-width: 480px) {
+                .collection-hero h1 {
+                    font-size: 2rem;
+                }
+                .collection-hero p {
+                    font-size: 1rem;
+                }
+                .subcategory-grid {
+                    grid-template-columns: 1fr;
+                    gap: 1.5rem;
+                }
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Elegance Plus</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="collections.html" class="active">Collections</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#search"><i class="fas fa-search"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="collection-hero">
+            <div class="collection-hero-content">
+                <h1>Discover Your Style</h1>
+                <p>Explore our exclusive collections designed to celebrate every curve with confidence and comfort. Find your perfect fit today.</p>
+                <a href="#collections" class="cta-button">Shop Collections</a>
+            </div>
+        </section>
+
+        <main id="collections">
+
+        <!-- Tops Section -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2>Shop by Category</h2>
+                <p class="category-subtitle">Discover our curated collections for every style and occasion</p>
+            </div>
+            
+            <div class="category-navigation">
+                <button class="category-nav-btn active" data-category="tops">Tops</button>
+                <button class="category-nav-btn" data-category="bottoms">Bottoms</button>
+                <button class="category-nav-btn" data-category="dresses">Dresses</button>
+                <button class="category-nav-btn" data-category="outerwear">Outerwear</button>
+                <button class="category-nav-btn" data-category="activewear">Activewear</button>
+            </div>
+            
+            <div class="category-content" id="tops">
+                <h3 class="category-title">Tops Collection</h3>
+            <div class="subcategory-grid">
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="T-Shirts & Tees">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">T-Shirts & Tees</div>
+                        <a href="shop.html?category=tops&subcategory=tshirts" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tunics">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Tunics</div>
+                        <a href="shop.html?category=tops&subcategory=tunics" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Crop Tops">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Crop Tops</div>
+                        <a href="shop.html?category=tops&subcategory=crop-tops" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sweaters & Cardigans">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Sweaters & Cardigans</div>
+                        <a href="shop.html?category=tops&subcategory=sweaters" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottoms Section -->
+        <section class="category-section">
+            <div class="category-content" id="bottoms">
+                <h3 class="category-title">Bottoms Collection</h3>
+            <div class="subcategory-grid">
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jeans">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Jeans</div>
+                        <a href="shop.html?category=bottoms&subcategory=jeans" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1506629905607-d9c36ad15364?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Leggings & Jeggings">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Leggings & Jeggings</div>
+                        <a href="shop.html?category=bottoms&subcategory=leggings" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1583496661160-fb5886a13804?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Skirts">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Skirts</div>
+                        <a href="shop.html?category=bottoms&subcategory=skirts" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Trousers & Pants">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Trousers & Pants</div>
+                        <a href="shop.html?category=bottoms&subcategory=pants" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Shorts">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Shorts</div>
+                        <a href="shop.html?category=bottoms&subcategory=shorts" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dresses Section -->
+        <section class="category-section">
+            <div class="category-content" id="dresses">
+                <h3 class="category-title">Dresses Collection</h3>
+            <div class="subcategory-grid">
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Casual Dresses">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Casual Dresses</div>
+                        <a href="shop.html?category=dresses&subcategory=casual" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1566479179817-3a9d7e9b1e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Party & Evening Dresses">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Party & Evening Dresses</div>
+                        <a href="shop.html?category=dresses&subcategory=evening" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Work/Office Dresses">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Work/Office Dresses</div>
+                        <a href="shop.html?category=dresses&subcategory=office" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Maxi Dresses">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Maxi Dresses</div>
+                        <a href="shop.html?category=dresses&subcategory=maxi" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outerwear Section -->
+        <section class="category-section">
+            <div class="category-content" id="outerwear">
+                <h3 class="category-title">Outerwear Collection</h3>
+            <div class="subcategory-grid">
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jackets & Blazers">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Jackets & Blazers</div>
+                        <a href="shop.html?category=outerwear&subcategory=jackets" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coats">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Coats</div>
+                        <a href="shop.html?category=outerwear&subcategory=coats" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cardigans">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Cardigans</div>
+                        <a href="shop.html?category=outerwear&subcategory=cardigans" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activewear Section -->
+        <section class="category-section">
+            <div class="category-content" id="activewear">
+                <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Activewear Collection">
+            <div class="subcategory-grid">
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sports Bras">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Sports Bras</div>
+                        <a href="shop.html?category=activewear&subcategory=sports-bras" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1506629905607-d9c36ad15364?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Workout Leggings">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Workout Leggings</div>
+                        <a href="shop.html?category=activewear&subcategory=leggings" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <div class="subcategory-image">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hoodies">
+                    </div>
+                    <div class="subcategory-content">
+                        <div class="subcategory-title">Hoodies</div>
+                        <a href="shop.html?category=activewear&subcategory=hoodies" class="shop-now-btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Celebrating all body types with stylish, comfortable plus-size clothing.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe for the latest trends and exclusive offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Plus Size Fashion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Image loading functionality
+            const images = document.querySelectorAll('.subcategory-image img');
+            
+            images.forEach(img => {
+                img.addEventListener('load', function() {
+                    this.classList.add('loaded');
+                });
+                
+                if (img.complete) {
+                    img.classList.add('loaded');
+                }
+            });
+
+            // Mobile menu functionality
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenu && navLinks) {
+                mobileMenu.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+            }
+
+            // Category navigation
+            const categoryBtns = document.querySelectorAll('.category-nav-btn');
+            const categorySections = document.querySelectorAll('.category-content');
+            
+            // Show first category by default
+            if (categorySections.length > 0) {
+                categorySections[0].style.display = 'block';
+            }
+            
+            // Handle category button clicks
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const targetCategory = this.getAttribute('data-category');
+                    
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show target category and hide others
+                    categorySections.forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    
+                    const targetSection = document.getElementById(targetCategory);
+                    if (targetSection) {
+                        targetSection.style.display = 'block';
+                        
+                        // Smooth scroll to section
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Handle hash in URL for direct linking
+            if (window.location.hash) {
+                const targetId = window.location.hash.substring(1);
+                const targetBtn = document.querySelector(`.category-nav-btn[data-category="${targetId}"]`);
+                if (targetBtn) {
+                    targetBtn.click();
+                }
+            }
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(targetId);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+
+        // Add loading state management
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+            
+            // Add fade-in animation for content
+            const animatedElements = document.querySelectorAll('.category-section, .collection-hero');
+            animatedElements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+</html>

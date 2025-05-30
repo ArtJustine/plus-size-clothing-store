@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Plus Size Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Elegance Plus</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="collections.html">Collections</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#search"><i class="fas fa-search"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="shop-container">
+            <div class="shop-sidebar" id="shopSidebar">
+                <div class="mobile-filter-header">
+                    <h3>Filters</h3>
+                    <button class="close-filters">×</button>
+                </div>
+                <div class="filter-section">
+                    <h3>Filter By</h3>
+                    <div class="filter-group">
+                        <h4>Categories</h4>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="tops" name="category"> Tops</label>
+                            <label><input type="checkbox" value="bottoms" name="category"> Bottoms</label>
+                            <label><input type="checkbox" value="dresses" name="category"> Dresses</label>
+                            <label><input type="checkbox" value="outerwear" name="category"> Outerwear</label>
+                            <label><input type="checkbox" value="activewear" name="category"> Activewear</label>
+                            <label><input type="checkbox" value="loungewear" name="category"> Loungewear & Sleepwear</label>
+                            <label><input type="checkbox" value="undergarments" name="category"> Undergarments</label>
+                            <label><input type="checkbox" value="swimwear" name="category"> Swimwear</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Subcategories</h4>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="blouses" name="subcategory"> Blouses & Shirts</label>
+                            <label><input type="checkbox" value="tshirts" name="subcategory"> T-Shirts & Tees</label>
+                            <label><input type="checkbox" value="tunics" name="subcategory"> Tunics</label>
+                            <label><input type="checkbox" value="crop-tops" name="subcategory"> Crop Tops</label>
+                            <label><input type="checkbox" value="sweaters" name="subcategory"> Sweaters & Cardigans</label>
+                            <label><input type="checkbox" value="jeans" name="subcategory"> Jeans</label>
+                            <label><input type="checkbox" value="leggings" name="subcategory"> Leggings & Jeggings</label>
+                            <label><input type="checkbox" value="skirts" name="subcategory"> Skirts</label>
+                            <label><input type="checkbox" value="pants" name="subcategory"> Trousers & Pants</label>
+                            <label><input type="checkbox" value="shorts" name="subcategory"> Shorts</label>
+                            <label><input type="checkbox" value="casual-dresses" name="subcategory"> Casual Dresses</label>
+                            <label><input type="checkbox" value="evening-dresses" name="subcategory"> Party & Evening Dresses</label>
+                            <label><input type="checkbox" value="work-dresses" name="subcategory"> Work/Office Dresses</label>
+                            <label><input type="checkbox" value="maxi-dresses" name="subcategory"> Maxi Dresses</label>
+                            <label><input type="checkbox" value="bodycon-dresses" name="subcategory"> Bodycon Dresses</label>
+                            <label><input type="checkbox" value="jackets" name="subcategory"> Jackets & Blazers</label>
+                            <label><input type="checkbox" value="coats" name="subcategory"> Coats</label>
+                            <label><input type="checkbox" value="vests" name="subcategory"> Vests</label>
+                            <label><input type="checkbox" value="denim-jackets" name="subcategory"> Denim Jackets</label>
+                            <label><input type="checkbox" value="raincoats" name="subcategory"> Raincoats</label>
+                            <label><input type="checkbox" value="sports-bras" name="subcategory"> Sports Bras</label>
+                            <label><input type="checkbox" value="workout-leggings" name="subcategory"> Workout Leggings</label>
+                            <label><input type="checkbox" value="hoodies" name="subcategory"> Hoodies</label>
+                            <label><input type="checkbox" value="tracksuits" name="subcategory"> Tracksuits</label>
+                            <label><input type="checkbox" value="yoga-pants" name="subcategory"> Yoga Pants</label>
+                            <label><input type="checkbox" value="pajamas" name="subcategory"> Pajamas</label>
+                            <label><input type="checkbox" value="robes" name="subcategory"> Robes</label>
+                            <label><input type="checkbox" value="lounge-sets" name="subcategory"> Lounge Sets</label>
+                            <label><input type="checkbox" value="nightgowns" name="subcategory"> Nightgowns</label>
+                            <label><input type="checkbox" value="bras" name="subcategory"> Bras</label>
+                            <label><input type="checkbox" value="shapewear" name="subcategory"> Shapewear</label>
+                            <label><input type="checkbox" value="panties" name="subcategory"> Panties</label>
+                            <label><input type="checkbox" value="lingerie" name="subcategory"> Lingerie</label>
+                            <label><input type="checkbox" value="one-piece" name="subcategory"> One-piece Swimsuits</label>
+                            <label><input type="checkbox" value="bikinis" name="subcategory"> Bikinis</label>
+                            <label><input type="checkbox" value="tankinis" name="subcategory"> Tankinis</label>
+                            <label><input type="checkbox" value="swim-dresses" name="subcategory"> Swim Dresses</label>
+                            <label><input type="checkbox" value="cover-ups" name="subcategory"> Cover-ups</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Sizes</h4>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="14" name="size"> Size 14</label>
+                            <label><input type="checkbox" value="16" name="size"> Size 16</label>
+                            <label><input type="checkbox" value="18" name="size"> Size 18</label>
+                            <label><input type="checkbox" value="20" name="size"> Size 20</label>
+                            <label><input type="checkbox" value="22" name="size"> Size 22</label>
+                            <label><input type="checkbox" value="24" name="size"> Size 24</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="price-slider-container">
+                            <input type="range" min="0" max="500" value="100" class="price-slider">
+                            <p class="price-range">$0 - $500</p>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Color</h4>
+                        <div class="color-options">
+                            <label><input type="checkbox" value="black"> Black</label>
+                            <label><input type="checkbox" value="white"> White</label>
+                            <label><input type="checkbox" value="red"> Red</label>
+                            <label><input type="checkbox" value="blue"> Blue</label>
+                            <label><input type="checkbox" value="pink"> Pink</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-main">
+                <button class="mobile-filter-toggle">
+                    <i class="fas fa-filter"></i> Filters
+                </button>
+                <div class="shop-header">
+                    <h2>Shop All</h2>
+                    <div class="sort-options">
+                        <select class="sort-select">
+                            <option value="latest">Latest Arrivals</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="popularity">Most Popular</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="product-grid">
+                    <!-- Product cards will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .shop-container {
+                display: grid;
+                grid-template-columns: 250px 1fr;
+                gap: 2rem;
+                padding: 2rem;
+                margin-top: 60px;
+                position: relative;
+            }
+
+            .shop-sidebar {
+                background: #f8f9fa;
+                padding: 1.5rem;
+                border-radius: 10px;
+            }
+
+            .filter-section {
+                margin-bottom: 2rem;
+            }
+
+            .filter-group {
+                margin-bottom: 1.5rem;
+            }
+
+            .filter-group h4 {
+                margin: 1rem 0;
+                color: #333;
+            }
+
+            .filter-options label {
+                display: block;
+                margin: 0.5rem 0;
+                color: #666;
+            }
+
+            .filter-options input[type="checkbox"] {
+                margin-right: 0.5rem;
+            }
+
+            .price-slider-container {
+                margin: 1rem 0;
+            }
+
+            .shop-main {
+                background: #fff;
+                padding: 2rem;
+                border-radius: 10px;
+            }
+
+            .shop-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 2rem;
+            }
+
+            .sort-options {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .sort-select {
+                padding: 0.5rem;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                width: 100%;
+                max-width: 200px;
+            }
+
+            @media (max-width: 1024px) {
+                .shop-container {
+                    grid-template-columns: 1fr;
+                }
+
+                .shop-sidebar {
+                    margin-bottom: 2rem;
+                }
+            }
+            /* Mobile Styles */
+            @media (max-width: 768px) {
+                .shop-container {
+                    grid-template-columns: 1fr;
+                    padding: 1rem;
+                    gap: 1rem;
+                    margin-top: 0;
+                }
+
+                .shop-sidebar {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0.95);
+                    width: 90%;
+                    max-width: 400px;
+                    max-height: 80vh;
+                    z-index: 1500;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    padding: 1.5rem;
+                    overflow-y: auto;
+                    background: white;
+                    border-radius: 12px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                    opacity: 0;
+                    visibility: hidden;
+                    -webkit-overflow-scrolling: touch;
+                    overscroll-behavior: contain;
+                    pointer-events: auto;
+                }
+                
+                .shop-sidebar.active {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translate(-50%, -50%) scale(1);
+                    pointer-events: auto;
+                }
+
+                .mobile-filter-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-bottom: 1rem;
+                    border-bottom: 1px solid #eee;
+                    margin-bottom: 1rem;
+                    position: sticky;
+                    top: 0;
+                    background: white;
+                    z-index: 1;
+                    padding-top: 0.5rem;
+                }
+
+                .close-filters {
+                    background: none;
+                    border: none;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+
+
+                .mobile-filter-toggle {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    padding: 0.5rem 1rem;
+                    background: var(--primary-color);
+                    color: white;
+                    border: none;
+                    border-radius: 25px;
+                    margin: 0;
+                    cursor: pointer;
+                    font-weight: 500;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    transition: all 0.2s ease;
+                    position: fixed;
+                    top: 80px;
+                    right: 1rem;
+                    z-index: 1300;
+                    width: auto;
+                    font-size: 0.9rem;
+                }
+                
+                .mobile-filter-toggle:hover {
+                    background: var(--secondary-color);
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+                }
+
+
+                .shop-main {
+                    padding: 1rem 0;
+                    width: 100%;
+                }
+
+                .shop-header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1rem;
+                }
+                .sort-options {
+                    width: 100%;
+                }
+                .sort-select {
+                    max-width: 100%;
+                }
+                .filter-options {
+                    max-height: 50vh;
+                    overflow-y: auto;
+                    padding-right: 0.5rem;
+                    margin-bottom: 1rem;
+                    -webkit-overflow-scrolling: touch;
+                    overscroll-behavior: contain;
+                }
+                
+                .filter-options label {
+                    display: flex;
+                    align-items: center;
+                    padding: 0.75rem 0.5rem 0.75rem 2.5rem;
+                    margin: 0.25rem 0;
+                    border-radius: 4px;
+                    position: relative;
+                    cursor: pointer;
+                    -webkit-tap-highlight-color: transparent;
+                    transition: background-color 0.2s ease;
+                    min-height: 24px;
+                }
+                
+                .filter-options label:hover {
+                    background-color: rgba(0,0,0,0.03);
+                }
+                
+                .filter-options input[type="checkbox"] {
+                    position: absolute;
+                    left: 0.75rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 20px;
+                    height: 20px;
+                    margin: 0;
+                    cursor: pointer;
+                }
+                
+                .filter-options label::before {
+                    content: '';
+                    position: absolute;
+                    left: 0.75rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid #ccc;
+                    border-radius: 4px;
+                    background: white;
+                    transition: all 0.2s ease;
+                }
+                
+                .filter-options input[type="checkbox"]:checked + label::before {
+                    background: var(--primary-color);
+                    border-color: var(--primary-color);
+                }
+                
+                .filter-options input[type="checkbox"]:checked + label::after {
+                    content: '✓';
+                    position: absolute;
+                    left: 1.15rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: white;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                
+                .filter-group {
+                    margin-bottom: 1.5rem;
+                    background: #f9f9f9;
+                    padding: 1rem;
+                    border-radius: 8px;
+                }
+                
+                .filter-group h4 {
+                    margin-top: 0;
+                    margin-bottom: 0.75rem;
+                    color: #333;
+                    font-size: 1rem;
+                }
+                .filter-options::-webkit-scrollbar {
+                    width: 5px;
+                }
+                .filter-options::-webkit-scrollbar-thumb {
+                    background: #ccc;
+                    border-radius: 3px;
+                }
+            }
+
+            /* Overlay for mobile menu */
+            .overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.5);
+                z-index: 999;
+            }
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                backdrop-filter: blur(3px);
+            }
+            .overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const mobileFilterToggle = document.querySelector('.mobile-filter-toggle');
+                const shopSidebar = document.getElementById('shopSidebar');
+                const closeFilters = document.querySelector('.close-filters');
+                
+                // Create overlay if it doesn't exist
+                let overlay = document.querySelector('.overlay');
+                if (!overlay) {
+                    overlay = document.createElement('div');
+                    overlay.className = 'overlay';
+                    document.body.appendChild(overlay);
+                }
+                
+                // Close on escape key
+                function handleEscape(e) {
+                    if (e.key === 'Escape' && shopSidebar.classList.contains('active')) {
+                        closeFilter();
+                    }
+                }
+                
+                function closeFilter() {
+                    shopSidebar.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                    document.removeEventListener('keydown', handleEscape);
+                }
+                
+                function openFilter() {
+                    shopSidebar.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    document.addEventListener('keydown', handleEscape);
+                }
+
+                // Use both touch and click events for better mobile support
+                const addTapEvents = (element, callback) => {
+                    element.addEventListener('click', callback);
+                    element.addEventListener('touchend', function(e) {
+                        e.preventDefault();
+                        callback(e);
+                    }, { passive: false });
+                };
+
+                // Open filter
+                addTapEvents(mobileFilterToggle, function(e) {
+                    e.stopPropagation();
+                    openFilter();
+                });
+
+                // Close filter
+                addTapEvents(closeFilters, function(e) {
+                    e.stopPropagation();
+                    closeFilter();
+                });
+
+                // Close on overlay tap
+                addTapEvents(overlay, function(e) {
+                    e.stopPropagation();
+                    closeFilter();
+                });
+
+                // Prevent touch events from propagating to parent elements
+                shopSidebar.addEventListener('touchmove', function(e) {
+                    e.stopPropagation();
+                }, { passive: false });
+
+                // Close when clicking outside the sidebar on mobile
+                document.addEventListener('click', function(event) {
+                    if (window.innerWidth <= 768 && 
+                        !event.target.closest('.shop-sidebar') && 
+                        !event.target.closest('.mobile-filter-toggle')) {
+                        closeFilter();
+                    }
+                });
+                
+                // Make filter options more touch-friendly
+                function setupFilterOptions() {
+                    const filterOptions = document.querySelectorAll('.filter-options label');
+                    filterOptions.forEach(option => {
+                        option.style.cursor = 'pointer';
+                        option.setAttribute('role', 'button');
+                        option.setAttribute('aria-pressed', 'false');
+                        option.setAttribute('tabindex', '0');
+                        
+                        // Initialize aria-pressed state
+                        const checkbox = option.querySelector('input[type="checkbox"]');
+                        if (checkbox) {
+                            option.setAttribute('aria-pressed', checkbox.checked);
+                        }
+                        
+                        // Handle keyboard navigation
+                        option.addEventListener('keydown', function(e) {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                const cb = this.querySelector('input[type="checkbox"]');
+                                if (cb) {
+                                    cb.checked = !cb.checked;
+                                    this.setAttribute('aria-pressed', cb.checked);
+                                }
+                            }
+                        });
+                        
+                        // Handle touch/click
+                        option.addEventListener('click', function(e) {
+                            const cb = this.querySelector('input[type="checkbox"]');
+                            if (cb) {
+                                cb.checked = !cb.checked;
+                                this.setAttribute('aria-pressed', cb.checked);
+                                e.stopPropagation();
+                            }
+                        }, { passive: true });
+                    });
+                }
+                
+                // Initialize filter options
+                setupFilterOptions();
+            });
+        </script>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>We celebrate beauty in every size with comfortable, stylish clothing for plus-size women.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@eleganceplus.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Elegance Plus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="shop.js"></script>
+</body>
+</html>
