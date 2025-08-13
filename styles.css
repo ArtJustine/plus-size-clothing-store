@@ -28,6 +28,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    opacity: 0;
+    animation: pageFadeIn 1.2s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+@keyframes pageFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Navbar Styles */
@@ -768,4 +775,38 @@ footer {
 
 .product-card, .collection-card {
     animation: fadeIn 0.5s ease-out;
+}
+
+.cta-button, .add-to-cart, .shop-now-btn, .checkout-button, .clear-cart, .newsletter-form button {
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(255,105,180,0.08);
+}
+.cta-button:focus, .add-to-cart:focus, .shop-now-btn:focus, .checkout-button:focus, .clear-cart:focus, .newsletter-form button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(255,105,180,0.15);
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.section, .featured-products, .collections, .category-section, .about-section, .cart-container {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUpSection 0.8s cubic-bezier(0.4,0,0.2,1) forwards;
+    animation-delay: 0.2s;
+}
+@keyframes fadeInUpSection {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-card, .collection-card, .subcategory-card, .team-member {
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s;
+    will-change: transform, box-shadow;
+}
+.product-card:hover, .collection-card:hover, .subcategory-card:hover, .team-member:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(255,105,180,0.15);
 }
